@@ -60,18 +60,21 @@ export default class MineCell extends React.Component{
 
   render(){
     const {currentState, opened, openedState, isMine} = this.state;
-    const size = this.props.size;
+    const {size, withTop, withLeft} = this.props;
     const cellStyle = {
       width: `${size-1}px`,
-      height: `${size-1}px`
-    }  
+      height: `${size-1}px`,
+      borderTopWidth: withTop?'1px':'0',
+      borderLeftWidth: withLeft?'1px':'0',
+      fontSize: `${Math.floor(size/2)}px`
+    }
 
     return (
       <div className="cell" style={cellStyle}>
         {
           opened?
           <span className="opened" style={{color:openedState.color}}>{openedState.content}</span>:
-          <button className="button" onClick={this.handleClick} onContextMenu={this.handleRightClick}>{currentState}</button>
+          <button className="not-opened" onClick={this.handleClick} onContextMenu={this.handleRightClick}>{currentState}</button>
         }
       </div>
     );

@@ -8,16 +8,20 @@ const OPTIONS={
 
 const OPEN_STATUS = {
   none: {
-    content: "",
-    color: ""
+    content: ".",
+    color: "#000000"
+  },
+  mine: {
+    content: "*",
+    color: "#ff0000"
   },
   one: {
     content: "1",
-    color: "#000000"
+    color: "#fff600"
   },
   two: {
     content: "2",
-    color: "#fff600"
+    color: "#ffb600"
   },
   three: {
     content: "3",
@@ -41,7 +45,7 @@ const OPEN_STATUS = {
   },
   eight: {
     content: "8",
-    color: "#ff0000"
+    color: "#d15757"
   }
 };
 

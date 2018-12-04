@@ -6,9 +6,9 @@ import Grid from './Grid.jsx';
 import './styles/main.css';
 
 const Root = (props)=>(
-  <div className="container-small">
+  <React.Fragment>
     <Grid />
-  </div>
+  </React.Fragment>
 );
 
 export default Root;

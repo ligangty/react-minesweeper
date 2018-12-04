@@ -10,11 +10,11 @@ export default class Grid extends React.Component{
   }
 
   render(){
-    const x=16,y=16;
+    const x=9,y=9;
     const large = Math.max(x, y)
     let screenWidth = window.innerWidth || document.documentElement.offsetWidth,
       screenHeight = window.innerHeight || document.documentElement.offsetHeight;
-    const size = Math.floor(screenHeight / large);
+    const size = Math.floor(screenHeight / large)-2;
 
     let grids = [];
 
@@ -29,9 +29,9 @@ export default class Grid extends React.Component{
     }
 
     return (
-      <React.Fragment>
+      <div className="container-small"}>
         {grids}
-      </React.Fragment>
+      </div>
     );
 
   }

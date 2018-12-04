@@ -16,14 +16,6 @@ export default class Grid extends React.Component{
       screenHeight = window.innerHeight || document.documentElement.offsetHeight;
     const size = Math.floor(screenHeight / large);
 
-    let width = x*size,
-        height = y*size;
-
-    const parentStyle = {
-      width: `${width}px`,
-      height: `${height}px`
-    }
-
     let grids = [];
 
     for (var i = 0; i < x; i++) {
@@ -37,9 +29,9 @@ export default class Grid extends React.Component{
     }
 
     return (
-      <div style={parentStyle}>
+      <React.Fragment>
         {grids}
-      </div>
+      </React.Fragment>
     );
 
   }

@@ -2,6 +2,7 @@
 
 import React from 'react';
 import MineCell from './MineCell.jsx';
+import Utils from './CompUtils.js';
 import './styles/main.css';
 
 export default class Grid extends React.Component{
@@ -15,6 +16,10 @@ export default class Grid extends React.Component{
     let screenWidth = window.innerWidth || document.documentElement.offsetWidth,
       screenHeight = window.innerHeight || document.documentElement.offsetHeight;
     const size = Math.floor(screenHeight / large);
+
+    // console.log(Utils.getArround(5,6,x,y));
+    //
+    // console.log(Utils.getMines(30,x,y));
 
     let grids = [];
 

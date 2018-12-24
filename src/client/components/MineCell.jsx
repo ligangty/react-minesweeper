@@ -16,8 +16,7 @@ export default class MineCell extends React.Component{
     }
   }
 
-  handleRightClick = (e) => {
-    let button = e.target;
+  handleRightClick = () => {
     let {currentState} = this.state;
     switch(currentState){
       case OPTIONS.normal:
@@ -39,7 +38,7 @@ export default class MineCell extends React.Component{
   }
 
 
-  handleClick = (e) => {
+  handleClick = () => {
     let opened = this.state.opened;
     if(!opened){
       opened = true;
@@ -59,7 +58,7 @@ export default class MineCell extends React.Component{
 
 
   render(){
-    const {currentState, opened, openedState, isMine} = this.state;
+    const {currentState, opened, openedState} = this.state;
     const {size, withTop, withLeft} = this.props;
     const cellStyle = {
       width: `${size-1}px`,
@@ -74,7 +73,11 @@ export default class MineCell extends React.Component{
         {
           opened?
           <span className="opened" style={{color:openedState.color}}>{openedState.content}</span>:
-          <button className="not-opened" onClick={this.handleClick} onContextMenu={this.handleRightClick}>{currentState}</button>
+          <button className="not-opened"
+            onClick={this.handleClick}
+            onContextMenu={this.handleRightClick}>
+            {currentState}
+          </button>
         }
       </div>
     );
@@ -82,5 +85,7 @@ export default class MineCell extends React.Component{
 }
 
 MineCell.propTypes={
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  withTop: PropTypes.boolean,
+  withLeft: PropTypes.boolean
 }

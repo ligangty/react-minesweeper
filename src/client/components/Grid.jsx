@@ -13,8 +13,8 @@ export default class Grid extends React.Component{
   render(){
     const x=9,y=9;
     const large = Math.max(x, y)
-    let screenWidth = window.innerWidth || document.documentElement.offsetWidth,
-      screenHeight = window.innerHeight || document.documentElement.offsetHeight;
+    // let screenWidth = window.innerWidth || document.documentElement.offsetWidth;
+    let screenHeight = window.innerHeight || document.documentElement.offsetHeight;
     const size = Math.floor(screenHeight / large);
 
     // console.log(Utils.getArround(5,6,x,y));

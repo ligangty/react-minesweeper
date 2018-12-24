@@ -47,7 +47,9 @@ module.exports = {
             loader: 'url-loader'
           },
         ]
-      }
+      },
+      { test: /\.js$/, use: 'eslint-loader', exclude: /node_modules/ },
+      { test: /\.jsx?$/, use: 'eslint-loader', exclude: /node_modules/ }
     ]
   }
 

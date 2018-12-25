@@ -1,5 +1,3 @@
-'use strict'
-
 const OPTIONS={
   mine: "flag",
   question: "?",
@@ -56,7 +54,7 @@ const getOpenStatus = i => {
   } catch (e){
     return OPEN_STATUS.none;
   }
-}
+};
 
 
 

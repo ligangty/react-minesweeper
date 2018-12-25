@@ -1,13 +1,8 @@
-'use strict'
-
 import React from 'react';
 import Grid from './Grid.jsx';
 import './styles/main.css';
 
-const Root = ()=>(
-  <React.Fragment>
+const Root = ()=> <React.Fragment>
     <Grid />
-  </React.Fragment>
-);
-
+  </React.Fragment>;
 export default Root;

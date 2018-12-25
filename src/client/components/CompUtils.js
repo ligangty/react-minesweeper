@@ -1,5 +1,3 @@
-'use strict'
-
 const Utils = {
   getRandomInt: max => Math.floor(Math.random() * Math.floor(max)),
 
@@ -34,6 +32,6 @@ const Utils = {
     }
     return result;
   }
-}
+};
 
 export default Utils;

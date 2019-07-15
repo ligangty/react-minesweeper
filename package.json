@@ -5,15 +5,11 @@
   "license": "Apache-2.0",
   "private": true,
   "dependencies": {
-    "express": "^4.16.4",
-    "less": "^3.8.1",
     "prop-types": "^15.5.7-alpha.1",
     "react": "16.5.2",
     "react-dom": "16.5.2",
-    "react-redux": "^5.0.7",
     "react-router": "4.3.1",
-    "react-router-dom": "4.3.1",
-    "redux": "^4.0.1"
+    "react-router-dom": "4.3.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.1.5",
@@ -30,7 +26,10 @@
     "eslint": "^5.11.0",
     "eslint-loader": "^2.1.1",
     "eslint-plugin-react": "^7.11.1",
+    "express": "^4.17.1",
+    "less": "^3.9.0",
     "less-loader": "^4.1.0",
+    "lodash": ">=4.17.13",
     "nodemon": "^1.18.7",
     "style-loader": "^0.23.1",
     "url-loader": "^1.1.2",
